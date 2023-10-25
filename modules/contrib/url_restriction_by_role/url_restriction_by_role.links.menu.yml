@@ -1,0 +1,5 @@
+url_restriction_by_role.config.form:
+  route_name: url_restriction_by_role.config.form
+  parent: system.admin_config_search
+  description: 'Allows the restriction of urls by role.'
+  title: 'Url Restrictions by Role'

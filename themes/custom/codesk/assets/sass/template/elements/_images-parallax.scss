@@ -1,0 +1,114 @@
+.gsc-images-parallax{
+  width: 720px;
+  max-width: 100%;
+  @include clearfix();
+  margin: 0 auto;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 30px;
+  }
+  .images{
+    position: relative;
+  }
+  .action{
+    margin-top: 15px;
+  }
+  .image-1{
+    position: relative;
+    z-index: 1;
+  }
+  .image-2{
+    position: absolute;
+    bottom: 0px;
+    z-index: 9;
+    max-width: 80%;
+    background: $white;
+    padding: 20px 20px 0;
+  }
+  &.right{
+    .image-2{
+      right: 0;
+      text-align: right;
+    }
+  }
+
+  &.left{
+    .image-2{
+      left: 0;
+      text-align: left;
+    }
+  }
+  &.style-v1{
+    &.right{
+      .content-box{
+        left: auto;
+        right: 0;
+      }
+    }
+    .images{
+      position: relative;
+      text-align: center;
+      @include media-breakpoint-down(sm){
+        max-width: 650px;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+    .content-box{
+      background: $theme-color;
+      color: $white;
+      text-align: center;
+      padding: 20px 30px 30px;
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      max-width: 170px;
+      z-index: 99;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-breakpoint-down(md){
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 14px;
+        line-height: 20px;
+        padding: 15px;
+      }
+    }  
+  }
+  &.style-v2{
+    .images{
+      position: relative;
+      padding-left: 80px;
+      padding-right: 50px;
+      padding-bottom: 115px;
+      overflow: hidden;
+    }
+    .content-box-inner{
+      text-align: center;
+      font-size: 16px;
+      -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
+      margin: 0;
+      font-weight: 600;
+      white-space: nowrap;
+      width: 106px;
+      position: absolute;
+      top: 0;
+      bottom: 115px;
+      left: -50px;
+      z-index: 1;
+      background: $theme-color;
+      color: #fff;
+      padding: 10px 20px;
+      line-height: 1;
+      overflow: hidden;
+      letter-spacing: .6px;
+    }
+  }
+}

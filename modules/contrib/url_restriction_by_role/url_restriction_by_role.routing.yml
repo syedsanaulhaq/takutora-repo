@@ -1,0 +1,7 @@
+url_restriction_by_role.config.form:
+  path: '/admin/config/search/path/url-restriction-by-role'
+  defaults:
+    _form: '\Drupal\url_restriction_by_role\Form\UrlRestrictionByRoleSettingsForm'
+    _title: 'Url Restriction by Role'
+  requirements:
+    _permission: 'admin url restriction by role settings'

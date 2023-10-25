@@ -1,0 +1,10 @@
+name: Hide Node Title
+type: module
+description: Allows you to hide a node title when hide_title field is checked
+core_version_requirement: ">=8"
+package: Custom
+
+# Information added by Drupal.org packaging script on 2022-10-05
+version: '2.0.0'
+project: 'hide_node_title'
+datestamp: 1664979524

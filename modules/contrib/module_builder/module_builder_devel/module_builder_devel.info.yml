@@ -1,0 +1,13 @@
+name: 'Module Builder Devel'
+type: module
+description: 'Development tools for working on Module Builder and Drupal Code Builder.'
+hidden: true
+dependencies:
+  - module_builder:module_builder
+  - devel:devel
+core_version_requirement: ^8 || ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2023-01-24
+version: '8.x-3.28'
+project: 'module_builder'
+datestamp: 1674551190

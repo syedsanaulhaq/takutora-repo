@@ -1,0 +1,10 @@
+name: 'Views User Field Value'
+type: module
+description: 'Provides a Views user field value contextual filter.'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Views'
+
+# Information added by Drupal.org packaging script on 2022-12-06
+version: '8.1.3'
+project: 'user_field_value'
+datestamp: 1670299339

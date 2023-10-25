@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * Installation file for miniOrange OAuth Login Module.
+ */
+use Drupal\oauth_login_oauth2\Utilities;
+use Drupal\oauth_login_oauth2\handler;
+
+/**
+ * hook_uninstall
+ * Configure variables are cleared when module is uninstalled.
+ **/
+
+function oauth_login_oauth2_uninstall() {
+    $status        = \Drupal::config('oauth_login_oauth2.settings')->get('miniorange_oauth_uninstall_status');
+    $mo_config     = \Drupal::configFactory()->getEditable('oauth_login_oauth2.settings');
+    $post          = \Drupal::request()->request->all();
+    $skip_feedback = isset($post['miniorange_oauth_skip_feedback']) ? 1 : 0;
+
+    $email   = isset($post['miniorange_oauth_feedback_email'])   ? $post['miniorange_oauth_feedback_email']   : '' ;
+    $reason  = isset($post['miniorange_oauth_uninstall_reason']) ? $post['miniorange_oauth_uninstall_reason'] : '';
+    $query   = isset($post['miniorange_oauth_feedback_query'])   ? $post['miniorange_oauth_feedback_query']   : '';
+
+    if(!($status == 1)){
+        $mo_config->set('miniorange_oauth_client_feedback',1)->save();
+    }
+
+    if(\Drupal::config('oauth_login_oauth2.settings')->get('miniorange_oauth_client_feedback') == '1')
+    {
+        $drupal_is_cli = Utilities::drupal_is_cli();
+        $mo_config->clear('miniorange_oauth_client_feedback')->save();
+        // Checking if the site has an active internet connection
+        $connected = fopen("http://login.xecurify.com:80/","r");
+        if($connected!=FALSE){
+            if(!$drupal_is_cli){
+                $feedback = new handler();
+                $feedback->sendFeedbackEmail($email,$reason,$query,$skip_feedback);
+                $mo_config->set('miniorange_oauth_uninstall_status',1)->save();
+                fclose($connected);
+            }else{
+                $reason = "Command Line Uninstallation";
+                $skip_feedback = 1;
+                $feedback = new handler();
+                $feedback->sendFeedbackEmail($email,$reason,$query,$skip_feedback);
+                $mo_config->set('miniorange_oauth_uninstall_status',1)->save();
+                fclose($connected);
+            }
+        }
+    }
+
+    $mo_config->clear('miniorange_oauth_client_attr_list_from_server')->save();
+}
+
+/**
+ * Implements hook_install().
+ */
+function oauth_login_oauth2_install() {
+    drupal_flush_all_caches();
+    $install_date = date('M j\, Y h:i:s A \(e\)');
+    $mo_config = \Drupal::configFactory()->getEditable('oauth_login_oauth2.settings');
+    $mo_config->set('miniorange_oauth_client_feedback', '1')
+        ->set('miniorange_oauth_uninstall_status',0)
+        ->set('miniorange_oauth_install_date',$install_date)
+        ->save();
+}

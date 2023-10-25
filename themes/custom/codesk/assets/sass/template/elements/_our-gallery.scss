@@ -1,0 +1,107 @@
+.gsc-our-gallery{
+  .title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    color: $black;
+    text-align: center;
+    font-weight: 900;
+  }
+  &.padding-small{
+    .init-carousel-owl .owl-item > .item {
+      padding: 6px 3px 0;
+      background: $white;
+    }
+  }
+  &.remove-padding {
+    .init-carousel-owl .owl-item > .item {
+      padding: 0;
+    }
+  }
+  
+  .image {
+    position: relative;
+    text-align: center;
+    a{
+      display: inline-block;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      pointer-events: none;
+      @include size(100%, 100%);
+      @include transform(scale(0));
+      @include transition(all 0.35s);
+      background-color: $black-2;  
+    }
+    .icon-expand{
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 30px;
+      color: $white;
+      background: $theme-color;
+      text-align: center;
+      line-height: 90px;
+      @include size(90px, 90px);
+      @include transform(translate(-50%, -50%));
+      @include opacity(0);
+      @include transition(all 0.35s);
+      @include media-breakpoint-down(sm){
+        line-height: 50px;
+        @include size(50px, 50px);
+        font-size: 20px;
+      }
+      &:after {
+        content: '';
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        @include transition(all 0.35s);
+        background: #fff;
+      }
+      i{
+        position: relative;
+        z-index: 10;
+      }
+      &:hover, &:focus, &:active{
+        color: $theme-color;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .content-inner:hover {
+    .image {
+      &:after {
+        @include opacity(0.36);
+        @include transform(scale(1));
+      }
+      .icon-expand{
+        @include opacity(1);
+      }
+    }
+  }
+  .owl-nav{
+    .owl-prev{
+      margin-left: 90px!important;
+    }
+    .owl-next{
+      margin-right: 90px!important;
+    }
+  }
+  &.grid-column-3 .image{
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,146 @@
+.gsc-image-content{
+  margin-left: auto;
+  margin-right: auto;
+  @include media-breakpoint-down(xs){
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  .image{
+    overflow: hidden;
+    img{
+      @include transition(all 0.35s);
+    }  
+  }
+  .box-content{
+    background: #fff;
+    border: 1px solid #f7eae8;
+    padding: 45px 45px 15px;
+    @include media-breakpoint-down(lg){
+      padding: 25px 25px 15px;
+    }
+  }
+  .title{
+    margin-top: 0;
+    font-size: 22px;
+    @include media-breakpoint-down(lg){
+      font-size: 20px;
+    }
+  }  
+  .read-more{
+    margin-top: 20px;
+  } 
+  &:hover, &:focus, &:active{
+    img{
+      @include transform(scale(1.1));
+    }
+  }
+  &.skin-v1{
+    @include media-breakpoint-up(sm){
+      display: flex;
+    }
+    .image{
+      @media (min-width: 1200px){  
+        width: 270px;
+      }
+      @media (max-width: 1199.98px) and (min-width: 992px){ 
+        width: 230px;
+      }
+      @media (max-width: 991.98px) and (min-width: 768px){ 
+        width: 50%;
+      } 
+    }
+    .box-content{
+      @media (min-width: 1200px){   
+        width: calc(100% - 270px);
+      }
+      @media (max-width: 1199.98px) and (min-width: 992px){ 
+          width: calc(100% - 230px); 
+      }
+      @media (max-width: 991.98px) and (min-width: 768px){ 
+          width: 50%;
+      }
+    }
+    
+    &:hover{
+      .read-more i{
+        animation: beat 1.5s ease 0s infinite;
+      }
+    }
+  }
+
+  &.skin-v2{
+    position: relative;
+    @include media-breakpoint-up(md){
+      .box-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        visibility: hidden;
+        @include transition(all 0.35s);
+        @include opacity(0);
+      }
+      &:hover, &:focus, &:active{
+        .box-content{
+          @include opacity(1);
+          height: 100%;
+          visibility: visible;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm){
+      @include media-breakpoint-up(sm){
+        display: flex;
+        .image, .box-content{
+          width: 50%;
+        }
+      }
+    }
+    
+  }
+  &.skin-v3{
+    position: relative;
+    .image{
+      position: relative;
+      display: inline-block;
+      &:after{
+        content: '';
+        background: rgba($theme-color, 0.2);
+        position: absolute;
+        @include size(100%, 100%);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        @include transition(all 0.35s);
+        @include opacity(0);
+      }
+      
+      &:hover{
+        &:after{
+         @include opacity(1);
+        }
+      }
+    }
+    .title{
+      font-size: 24px;
+      font-weight: 600;
+      color: $black-2;
+    }
+    .box-content {
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      background: $white;
+      padding: 20px;
+      color: $black-2;
+      z-index: 9;
+      @include media-breakpoint-down(sm){
+        padding: 10px;
+      }
+    }
+    .read-more{
+      margin-top: 10px;  
+    }
+  }
+}

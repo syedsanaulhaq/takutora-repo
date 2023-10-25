@@ -1,0 +1,5 @@
+<?php
+
+function codesk_sub_preprocess_html(&$variables) {
+  $variables['#attached']['library'][] = 'codesk_sub/codesk_sub.skin.default';
+}     

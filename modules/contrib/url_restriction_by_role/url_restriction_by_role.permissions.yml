@@ -1,0 +1,4 @@
+'admin url restriction by role settings':
+  title: 'Admin url restriction by role settings'
+  description: 'Administrative access to url restriction by role'
+  restrict access: true

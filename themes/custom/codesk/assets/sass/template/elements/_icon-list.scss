@@ -1,0 +1,64 @@
+.gsc-icon-list{
+	@include media-breakpoint-down(md){
+    	margin-bottom: 30px;
+  	}
+	ul{
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	}
+	&.skin-v1{
+		color: $black-2;
+		font-weight: 600;
+		.icon{
+			color: $theme-color;
+			font-size: 14px;
+			margin-right: 10px;
+		}
+		li + li {
+			padding-top: 6px;
+		}
+	}
+	&.skin-v2{
+		li {
+    		padding: 30px;
+    		&:nth-child(odd){
+    			background: #fbf0ee;
+    		}
+    		&::nth-child(even){
+    			background: #fff;
+    		}
+    		@include media-breakpoint-down(md){
+		    	padding: 25px;
+		  	}
+		}
+		.list-icon{
+			display: flex;
+			align-items: center;
+		}
+		.icon{
+		    text-align: center;
+		    line-height: 30px;
+		    background: $theme-color;
+		    text-align: center;
+		    line-height: 30px;
+		    color: $white;
+		    margin-right: 18px;
+		    display: inline-block;
+		    @include transition(all 0.35s);
+      		@include size(30px, 30px);
+      		i{
+      			margin-right: 0px;
+      			font-size: 12px;
+      		}
+		}
+		.title{
+			letter-spacing: -0.32px;
+			font-size: 16px;
+			line-height: 1.28;
+  			font-weight: bold;
+  			color: $black-2;
+  			font-family: $headings-font-family;
+		}
+	}
+}

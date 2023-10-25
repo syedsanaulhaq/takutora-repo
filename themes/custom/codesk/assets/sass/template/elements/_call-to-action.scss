@@ -1,0 +1,323 @@
+.gsc-call-to-action{
+  @include media-breakpoint-down(sm){
+    margin-bottom: 30px;
+  }
+  .title{
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0;
+    @include media-breakpoint-down(lg){
+      font-size: 38px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 32px;
+    }
+  }
+  .sub-title{
+    color: $theme-color;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .heading-line{
+    &.heading-line-1{
+      width: 80px;
+      height: 2px;
+      margin: 18px auto 18px;
+      background: $theme-color;
+    }
+    &.heading-line-2{
+      width: 80px;
+      height: 6px;
+      border-top: 1px solid $theme-color;
+      border-bottom: 1px solid $theme-color;
+      margin: 18px auto 18px;
+    }
+  }
+
+  .video-inner{
+    margin-bottom: 45px;
+    .link-video{
+      display: inline-block;
+      font-size: 24px;
+      color: $white;
+      background: $theme-color;   
+      text-align: center;
+      position: relative;
+      @include transition(all 0.35s);
+      @include size(80px, 80px);
+      line-height: 82px;
+      @include media-breakpoint-down(md){
+        @include size(60px, 60px);
+        line-height: 62px;
+      }
+      &::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #fff;
+        opacity: 0;
+        @include animation(pulse-border-2 1.5s linear infinite);
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #fff;
+        opacity: 0;
+        @include animation(pulse-border 1s linear infinite);
+      }
+      &:hover{
+        @include scale(0.9);
+      }
+    }
+  }
+  .button-action{
+    > a{
+      margin: 0 10px;
+      display: inline-block;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  .desc{
+    line-height: 30px;
+  }
+  
+  &.button-right{
+    position: relative;
+    .title{
+      margin: 0 0 10px!important;
+    }
+    .heading-line{
+      margin: 16px 0;
+    }
+    .content{
+      padding-right: 100px;
+      @media(max-width: 800px){
+        padding-right: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    .button-action{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+      @include transform(translateY(-50%));
+      @media(max-width: 800px){
+        position: relative;
+        margin-top: 15px;
+        @include transform(translateY(0));
+      }
+    }
+  }
+  &.button-left{
+    position: relative;
+    text-align: right;
+    .title{
+      margin: 0 0 10px!important;
+    }
+    .heading-line{
+      margin: 16px 0;
+    }
+    .content{
+      padding-left: 210px;
+      @media(max-width: 800px){
+        padding-left: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    .button-action{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -20px;
+      z-index: 1;
+      @media(max-width: 800px){
+        position: relative;
+        margin-top: 15px;
+      }
+    }
+  }
+  &.button-bottom{
+    .title{
+      position: relative;
+      margin-bottom: 32px;
+      font-size: 42px;
+      @include media-breakpoint-down(lg){
+        font-size: 38px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      .text-small{
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+    .heading-line{
+      margin: 16px 0;
+    }
+    .desc{
+      font-size: 16px;
+    }
+    .button-action{
+      margin-top: 45px;
+       @include media-breakpoint-down(md){
+        margin-top: 30px;
+      }
+    }
+    &.text-light{
+      .title{
+        &:after{
+          background: $white;
+        }
+      }
+    }
+  }
+  &.button-bottom-right{
+    padding: 30px 0;
+    text-align: right;
+    @include media-breakpoint-down(md){
+      padding: 0;
+    }
+    .title{
+      position: relative;
+      margin-top: 0;
+      letter-spacing: 0;
+      font-weight: 700;
+      margin-bottom: 32px;
+      &:after{
+        left: auto;
+        right: 0;
+      }
+      .text-small{
+        font-size: 30px;
+      }
+    }
+    .desc{
+      font-size: 16px;
+    }
+    .button-action{
+      margin-top: 30px;
+    }
+    &.text-light{
+      .title{
+        &:after{
+          background: $white;
+        }
+      }
+    }
+  }
+  &.button-center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    .sub-title + .title{
+      margin-top: 0;
+    }
+    .title{
+      position: relative;
+      margin-bottom: 0px;
+      margin-top: -10px;
+      letter-spacing: -2.56px;
+      @include media-breakpoint-down(lg){
+        letter-spacing: -0.8px;
+        font-size: 50px;
+      }
+      @include media-breakpoint-down(lg){
+        letter-spacing: -0.8px;
+        font-size: 50px;
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 30px;
+        letter-spacing: 0;
+      }
+    }
+    .desc{
+      margin-top: 20px;
+    }
+    .button-action{
+      margin-top: 50px;
+    }
+    &.text-light{
+      .title{
+        &:after{
+          background: $white;
+        }
+      }
+    }
+  }
+  &.has-background{
+    padding: 52px 15px 60px;
+    @include media-breakpoint-down(lg){
+      padding: 30px 15px 35px;
+    }
+    @include media-breakpoint-down(md){
+      padding: 35px 15px 50px;
+    }
+    .content-inner {
+      max-width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      @include media-breakpoint-down(md){
+        max-width: 100%;
+      }
+    }
+    .title{
+      margin-bottom: 0;
+      padding-bottom: 15px;
+      font-size: 20px;
+      &:after{
+        display: none;
+      }
+    }
+    .button-action{
+      margin-top: 20px;
+    }
+  }
+  &.border-style{
+    border: 4px solid $black-2;
+    padding: 60px 80px;
+    @include media-breakpoint-down(lg){
+      padding: 60px;
+    }
+    @include media-breakpoint-down(md){
+      padding: 40px 30px 45px;
+    }
+  }
+  &.text-light{
+    .content{
+      color: $white;
+      .sub-title{
+        color: $white;
+      }
+      .title{
+        color: $white;
+      }
+      .desc *{
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .subtitle{
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

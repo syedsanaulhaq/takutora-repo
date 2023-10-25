@@ -1,0 +1,5 @@
+url_restriction_by_role.config.form:
+  route_name: url_restriction_by_role.config.form
+  base_route: entity.path_alias.collection
+  title: 'Url Restrictions by Role'
+  weight: 100

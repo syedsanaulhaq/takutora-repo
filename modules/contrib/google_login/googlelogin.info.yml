@@ -1,0 +1,12 @@
+name: Google Login
+type: module
+description: Login in drupal with your google acount
+# version: '8.x-1.x-dev'
+core_version_requirement: ^8.8.0 || ^9.0
+package: Custom
+configure: googlelogin.settings_options
+
+# Information added by Drupal.org packaging script on 2021-02-09
+version: '2.0.0'
+project: 'google_login'
+datestamp: 1612877076

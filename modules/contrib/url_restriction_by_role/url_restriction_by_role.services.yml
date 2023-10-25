@@ -1,0 +1,6 @@
+services:
+  url_restriction_by_role:
+    class: '\Drupal\url_restriction_by_role\EventSubscriber\UrlRestrictionByRole'
+    arguments: ['@current_user', '@config.factory' , '@request_stack' , '@language_manager' , '@path.matcher' , '@current_route_match']
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,29 @@
+name: 'REST & JSON API Authentication'
+type: module
+core_version_requirement: ^9.3 || ^10
+description: 'Drupal API Authentication module secures unauthorized access to your Drupal site APIs using different API authentication methods.'
+configure: rest_api_authentication.auth_settings
+# Information added by Drupal.org packaging script on 2022-12-20
+# version: '2.0.1'
+# project: 'rest_api_authentication'
+# datestamp: 1671539472
+
+# Information added by Drupal.org packaging script on 2023-01-07
+# version: '2.0.3'
+# project: 'rest_api_authentication'
+# datestamp: 1673072410
+
+# Information added by Drupal.org packaging script on 2023-02-02
+# version: '2.0.5'
+# project: 'rest_api_authentication'
+# datestamp: 1675316471
+
+# Information added by Drupal.org packaging script on 2023-02-02
+# version: '2.0.6'
+# project: 'rest_api_authentication'
+# datestamp: 1675327461
+
+# Information added by Drupal.org packaging script on 2023-02-03
+version: '2.0.7'
+project: 'rest_api_authentication'
+datestamp: 1675418481

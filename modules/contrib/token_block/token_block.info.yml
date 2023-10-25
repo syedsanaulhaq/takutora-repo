@@ -1,0 +1,12 @@
+name: Token Block
+description: Allows users to create block with token. 
+core: 8.x
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - token
+
+# Information added by Drupal.org packaging script on 2022-01-27
+version: '8.x-1.2'
+project: 'token_block'
+datestamp: 1643273119

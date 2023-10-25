@@ -1,0 +1,53 @@
+.gsc-text-rotate{
+  .rotate-text{
+    max-width: 900px;
+    .primary-text{
+      font-size: 42px;
+      color: $theme-color-second;
+      letter-spacing: -1px;
+      font-weight: 700;
+      line-height: 1.2;
+      @include media-breakpoint-down(md){
+        font-size: 32px;
+      }
+    }
+    .second-text{
+      max-width: 690px;
+      margin: 30px auto;
+    }
+    .link{
+      margin-top: 20px;
+    }
+  }
+  &.align-center{
+    .rotate-text{
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &.align-left{
+    .rotate-text{
+      float: left;
+      text-align: left;
+    }
+    .primary-text{
+      text-align: left;
+    }
+    .second-text{
+      text-align: left;
+    }
+    .link{
+      text-align: left;
+    }
+  }
+  &.text-light{
+    .rotate-text{
+      .primary-text{
+        color: $white;
+      }
+      .second-text{
+        color: $white;
+      }
+    }
+  }
+}

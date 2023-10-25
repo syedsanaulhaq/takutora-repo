@@ -1,0 +1,12 @@
+name: 'Entity Export CSV'
+type: module
+description: 'Export Content Entity to CSV.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Export'
+configure: entity_export_csv.settings
+
+# Information added by Drupal.org packaging script on 2021-02-13
+version: '8.x-1.0-beta8'
+project: 'entity_export_csv'
+datestamp: 1613255111

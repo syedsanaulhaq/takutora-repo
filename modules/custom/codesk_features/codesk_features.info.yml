@@ -1,0 +1,35 @@
+name: 'Codesk Features'
+description: 'Codesk Features - Import content type, field, view ... for Codesk theme.'
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - block
+  - block_content
+  - comment
+  - contact
+  - datetime
+  - field
+  - file
+  - filter
+  - gavias_view
+  - gaviasthemer
+  - image
+  - imce
+  - mailchimp_signup
+  - menu_ui
+  - node
+  - options
+  - path
+  - pathauto
+  - search
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+  - webform
+  - config_update
+  - features
+  - admin_toolbar
+version: '2.0.0'

@@ -1,0 +1,175 @@
+.gsc-heading{
+  margin-top: -10px;
+  padding: 0 0 60px;
+  display: block;
+  width: 100%;
+  @include clearfix();
+  @include media-breakpoint-down(md){
+     padding: 0 0 30px;
+  }
+  .title{
+     position: relative;
+     margin: 0;
+  }
+  .sub-title{
+    color: $theme-color;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .title-desc {
+    font-size: 16px;
+    line-height: 34px;
+    margin-top: 30px;
+    @include media-breakpoint-down(md){
+      margin-top: 20px;
+    }
+  }
+  .heading-line{
+    &.heading-line-1{
+      width: 80px;
+      height: 2px;
+      margin: 16px auto 16px;
+      background: $theme-color;
+    }
+    &.heading-line-2{
+      width: 80px;
+      height: 6px;
+      border-top: 1px solid $theme-color;
+      border-bottom: 1px solid $theme-color;
+      margin: 16px auto 16px;
+    }
+    &.heading-line-3{
+      width: 30px;
+      background: $black;
+      height: 2px;
+      margin: 16px auto 16px;
+    }
+  }
+  .heading-bottom{
+    clear: both;
+    .title-desc{
+       max-width: 700px;
+       margin: 0 auto;
+       margin-top: 10px;
+       p{
+         margin-bottom: 0;
+       }
+    }
+  }
+  &.align-center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.align-left{
+    text-align: left;
+    .heading-line{
+      float: left;
+      clear: both;
+    }
+    .title-desc{
+      float: left; 
+    }
+    .title-icon{
+      padding-left: 50px;
+    }
+  }
+  &.align-right{
+    text-align: right;
+    float: right;
+    @include clearfix();
+    .heading-line{
+      float: right;
+      clear: both;
+    }
+  }
+  &.align-right{
+    text-align: right;
+    .title-desc{
+      float: right;
+    }
+  }
+  &.style-1{
+    .title{
+      font-size: 42px;
+      position: relative;
+      @include media-breakpoint-down(lg){
+        font-size: 38px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 32px;
+        letter-spacing: 0;
+      }
+    }
+    &.align-left{
+      .title{
+        &:after{
+          left: 0;
+          margin-left: 0;
+        }
+      }
+    }
+    &.align-right{
+      .title{
+        &:after{
+          right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &.style-2{
+    padding: 0 0 45px;
+    .title{  
+      font-size: 46px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      @include media-breakpoint-down(md){
+        font-size: 38px;
+      }
+      @include media-breakpoint-down(md){
+        &.fsize-00{
+          font-size: 32px;
+        }
+      }
+      &.fw-900{
+        letter-spacing: -1px;
+      }
+    }
+    .title-desc{
+      margin-top: 5px;
+    }
+  }
+
+  &.text-light{
+    .title-sub{
+      color: $white;
+    }
+    .title{
+      color: $white;
+    }
+    .sub-title span{
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .title-desc{
+      color: #f5f5f5;
+    }
+  }
+  .hd-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #303035;
+  }
+  .hd-job{
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: $theme-color;
+    text-transform: uppercase;
+  }
+  &.padding-bottom-0{
+    @include media-breakpoint-down(sm){
+      padding-bottom: 30px!important;
+    }
+  }
+}

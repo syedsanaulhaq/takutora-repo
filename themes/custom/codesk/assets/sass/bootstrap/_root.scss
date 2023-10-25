@@ -1,0 +1,49 @@
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $bp, $value in $grid-breakpoints {
+    --breakpoint-#{$bp}: #{$value};
+  }
+
+  --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+  --font-family-monospace: #{inspect($font-family-monospace)};
+
+  /****/
+  --codesk-font-sans-serif: "Open Sans", sans-serif;
+  --codesk-heading-font-family: 'Montserrat', sans-serif;
+
+  --codesk-theme-color            : #ff4332;
+  --codesk-theme-color-second     : #2A2C38;
+  
+  --font-body-weight              : 400;
+  --font-body-size                : 16px;
+
+  --body-color                    : #817a78;
+  --body-link-color               : #3f3836;
+  --body-link-color-hover         : #ff4332;
+
+  --topbar-bg-color               : #3F3836;
+  --topbar-color                  : #fff;
+  --topbar-link-color             : #fff;
+  --topbar-link-color-hover       : #ff4332;
+
+  --menu-link-color               : #817a78;
+  --menu-link-color-hover         : #3f3836;
+  --submenu-bg-color              : #ffffff;
+  --submenu-color                 : #817a78;
+  --submenu-link-color            : #817a78;
+  --submenu-link-color-hover      : #ff4332;
+
+  --footer-bg-color               : #3F3836; 
+  --footer-color                  : #cbc7c5;
+  --footer-link-color             : #cbc7c5;
+  --footer-link-color-hover       : #ff4332;
+
+}

@@ -1,0 +1,25 @@
+.gsc-socials{
+  margin-bottom: 30px;
+  a {     
+    text-decoration: none;
+    @include transition(all 0.5s ease 0s);
+    margin-right: 12px;
+    font-size: 14px;    
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover, &:focus, &:active{
+      i{
+        background: $theme-color;
+        color: $white;
+      }
+    }
+    i{
+      color: $black-2;
+      background: #f6f6f6;
+      @include size(41px, 41px);
+      line-height: 41px;
+      @include border-radius(50%);
+    }
+  }
+}

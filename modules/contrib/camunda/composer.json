@@ -1,0 +1,15 @@
+{
+  "name": "drupal/camunda",
+  "license": "GPL-2.0+",
+  "type": "drupal-module",
+  "description": "BPMN modeller for ECA, standalone desktop application with import and export from and to this Drupal site.",
+  "support": {
+    "issues": "https://drupal.org/project/issues/camunda",
+    "source": "https://drupal.org/project/camunda"
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "drupal/eca": "^1.0"
+  }
+}

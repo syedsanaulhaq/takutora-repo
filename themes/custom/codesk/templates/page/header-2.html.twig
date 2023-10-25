@@ -1,0 +1,65 @@
+<header id="header" class="header-2">
+  
+  {% set class_sticky = '' %}
+  {% if sticky_menu == 1 %}
+    {% set class_sticky = 'gv-sticky-menu' %}
+  {% endif %}  
+
+   <div class="header-main {{ class_sticky }}">
+      <div class="container header-content-layout">
+         <div class="header-main-inner p-relative">
+              <div class="content-inner">
+                <div class="branding">
+                  {% if page.branding %}
+                    {{ page.branding }}
+                  {% endif %}  
+                </div>
+                <div class="header-inner clearfix">
+                  <div class="main-menu">
+                    <div class="area-main-menu">
+                      <div class="area-inner">
+                          <div class="gva-offcanvas-mobile">
+                            <div class="close-offcanvas hidden"><i class="fa fa-times"></i></div>
+                            <div class="main-menu-inner">
+                              {% if page.main_menu %}
+                                {{ page.main_menu }}
+                              {% endif %}
+                            </div>
+
+                            {% if page.quick_menu %}
+                              <div class="quick-menu">
+                                <div class="icon"><a><span class="fas fa-grip-horizontal"></span></a></div>
+                                <div class="content-inner">
+                                  {{ page.quick_menu }}
+                                </div>  
+                              </div>
+                            {% endif %}
+
+                            {% if page.offcanvas %}
+                              <div class="after-offcanvas hidden">
+                                {{ page.offcanvas }}
+                              </div>
+                           {% endif %}
+                          </div> 
+                          
+                          <div id="menu-bar" class="menu-bar menu-bar-mobile d-lg-none d-xl-none">
+                            <span class="one"></span>
+                            <span class="two"></span>
+                            <span class="three"></span>
+                          </div>
+
+                      </div>
+                    </div>
+                  </div>  
+                </div> 
+                {% if page.header_right %}
+                  <div class="header-right d-none d-lg-block">
+                    {{ page.header_right }}
+                  </div>
+                {% endif %} 
+              </div>
+         </div>
+      </div>
+   </div>
+
+</header>

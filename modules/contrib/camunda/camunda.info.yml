@@ -1,0 +1,12 @@
+name: 'Camunda BPMN for ECA'
+type: module
+description: 'BPMN modeller for ECA, standalone desktop application with import and export from and to this Drupal site.'
+core_version_requirement: ^9 || ^10
+package: ECA
+dependencies:
+  - eca:eca_modeller_bpmn
+
+# Information added by Drupal.org packaging script on 2022-07-22
+version: '1.0.0'
+project: 'camunda'
+datestamp: 1658483897

@@ -1,0 +1,12 @@
+name: Charts Highcharts Maps
+type: module
+description: 'Charts module integration with Highcharts Maps library.'
+package: Charts
+core_version_requirement: ^8.8 || ^9 || ^10
+dependencies:
+  - charts:charts
+
+# Information added by Drupal.org packaging script on 2023-02-14
+version: '1.0.3'
+project: 'charts_highcharts_maps'
+datestamp: 1676385500

@@ -1,0 +1,12 @@
+name: Simple IFrame
+type: module
+description: 'Simple field formatter for iframe display'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Field types'
+dependencies:
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2022-11-19
+version: '8.x-1.0-rc3'
+project: 'simple_iframe'
+datestamp: 1668865234
